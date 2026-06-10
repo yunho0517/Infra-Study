@@ -1,0 +1,46 @@
+[ Day 02. Linux Practice ]
+
+1. whoami : This mean literally show that who am i
+
+2. hostnamectl : Show Server informations
+
+3. free -h : Show Memory (Info)
+
+4. df -h : Show Disk Usage (Group by Partitions)
+
+5. ps aux : When you want to see All of process (programs) informations Like Cpu, name, When did it, ......
+
+6. systemctl list-units --type=service : Check all process that type is service (current service)
+
+7. systemctl status sshd : Cehck sshd's state (Run Or Stop) 
+
+8. sudo systemctl stop sshd : Stop sshd (sshd only can stop root user)
+
+9. sudo systemctl start sshd : Start sshd 
+
+
+
+* <service vs process>
+
+- process means 'All of the Programs that is running now' 
+- But Service means 'Background process'. That means they are waiting and alive behind the background.
+  And that call the 'Daemon'.  
+  Normally this 'Daemon' Process name has 'd' behind. (ex. sshd) 
+
+
+
+10. journalctl -n 50 : Check current Logs
+
+11. journalctl -f : Check Logs Live 
+
+12. journalctl -u sshd : Check Service Logs
+
+13. cat /etc/passwd : Check current user
+
+14. sudo useradd testuser : Make testuser (Only can root)
+
+15, id testuser : Show uuid, gid, groups 
+
+16. sudo passwd testuser : Change testuser's password
+
+17. sudo userdel testuser : Delete testuser 

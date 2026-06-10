@@ -1,0 +1,96 @@
+[ Day 02. Linux Practice ]
+
+1. whoami : This mean literally show that who am i
+
+2. hostnamectl : Show Server informations
+
+3. free -h : Show Memory (Info)
+
+4. df -h : Show Disk Usage (Group by Partitions)
+
+5. ps aux : When you want to see All of process (programs) informations Like Cpu, name, When did it, ......
+
+
+
+[ systemctl ]
+
+6. systemctl list-units --type=service : Check all process that type is service (current service)
+
+7. systemctl status sshd : Check sshd's state (Run Or Stop) 
+
+8. sudo systemctl stop sshd : Stop sshd (sshd only can stop root user)
+
+9. sudo systemctl start sshd : Start sshd 
+
+
+
+* <service vs process>
+
+- process means 'All of the Programs that is running now' 
+- But Service means 'Background process'. That means they are waiting and alive behind the background.
+  And that call the 'Daemon'.  
+  Normally this 'Daemon' Process name has 'd' behind. (ex. sshd) 
+
+
+
+[ journalctl ]
+
+10. journalctl -n 50 : Check current Logs
+
+11. journalctl -f : Check Logs Live 
+
+12. journalctl -u sshd : Check Service Logs
+
+
+
+[ passwd & useradd & userdel ]
+
+13. cat /etc/passwd : Check current user
+
+14. sudo useradd testuser : Make testuser (Only can root)
+
+15, id testuser : Show uuid, gid, groups 
+
+16. sudo passwd testuser : Change testuser's password
+
+17. sudo userdel testuser : Delete testuser 
+
+
+
+
+[  dnf : Package Management ]
+
+19. sudo dnf check-update : Literally Check updates
+
+20. sudo dnf install tree -y : Install tree command 
+
+21. tree : Show current files like tree (In Directory) 
+
+22. sudo dnf remove tree -y : Remove tree command 
+
+23. dnf info tree : Check tree's info (Download Size, Version, name ...)
+
+24. dnf search tree : Check this server has package relation with 'tree' command  
+
+
+
+
+[ Install Apache ]
+
+25. sudo dnf install httpd -y : Install httpd Daemon 
+
+26. sudo systemctl start httpd : Start httpd system
+
+27. sudo systemctl enable httpd : Start Auto httpd When Linux server start
+
+28. systemctl status httpd : Check httpd state
+
+29. Open FireFox Browser --> http://localhost 
+
+30. sudo systemctl stop httpd : Stop httpd system
+
+31. sudo systemctl disable httpd : Disable Auto start httpd 
+
+32. sudo dnf remove httpd -y : Remove httpd Daemon
+
+33. systemctl is-enabled httpd : Check it is Work (Auto start) 

@@ -1,0 +1,5 @@
+Today RockyLinux First Protection1. 
+
+1. ping -c 4 google.com --> check the google.com 4 times 
+2. ip a --> check Network card and Ip address
+3. sudo whoami --> check can i use root grant?
